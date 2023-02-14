@@ -6,5 +6,5 @@ metadata:
   labels:
     {{- include "gatus.labels" . | nindent 4 }}
 data:
-  config.yaml: |
+  config.yaml: |-
     {{ .Values.config | default (.Files.Get "config.yaml") | indent 4 }}
