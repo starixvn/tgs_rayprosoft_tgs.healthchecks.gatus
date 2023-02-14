@@ -24,16 +24,16 @@ while read -r line; do
 
     cat << EOF >> $output_filename
   - group: ${arrIn[0]}
-	name: ${arrIn[1]}
-	url: ${arrIn[3]}
-	interval: ${arrIn[2]}
-	conditions:
-	  - ${arrIn[4]}
-	alerts:
-	- type: telegram
-	  enabled: true
-	  description: "healthcheck failed\nplease check ${gatus_url}"
-	  send-on-resolved: true
+    name: ${arrIn[1]}
+    url: ${arrIn[3]}
+    interval: ${arrIn[2]}
+    conditions:
+      - ${arrIn[4]}
+    alerts:
+    - type: telegram
+      enabled: true
+      description: "healthcheck failed\nplease check ${gatus_url}"
+      send-on-resolved: true
 EOF
     echo "========================="
 done <$file
