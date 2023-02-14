@@ -10,9 +10,9 @@ download to services.csv
 
 
 ### 執行安裝
-helm template gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=healthcheck.srvptt.com -f values.yaml -n dev
+helm template gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f values.yaml -n dev
 
-helm install gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=healthcheck.srvptt.com -f values.yaml -n dev
+helm install gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f values.yaml -n dev
 
 helm uninstall gatus -n dev
 
