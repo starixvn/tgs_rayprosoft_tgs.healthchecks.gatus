@@ -1,13 +1,13 @@
 #!/bin/bash
-gatus_url="https://dev-gatus.rpgp.cc/"
-output_filename=./cm_gatus.yaml
-file=./services.csv
 tgs_env=dev
+gatus_url="https://dev-gatus.rpgp.cc/"
+output_filename=$tgs_env/cm_gatus.yaml
+file=$tgs_env/services.csv
 telegram_token=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.telegram-token}" -n $tgs_env | base64 --decode)
 telegram_channel_id=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.telegram-channel-id}" -n $tgs_env | base64 --decode)
 storage_type=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.storage-type}" -n $tgs_env | base64 --decode)
 storage_path=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.storage-path}" -n $tgs_env | base64 --decode)
-cat << EOF > ./cm_gatus.yaml
+cat << EOF > $output_filename
 apiVersion: v1
 kind: ConfigMap
 metadata:

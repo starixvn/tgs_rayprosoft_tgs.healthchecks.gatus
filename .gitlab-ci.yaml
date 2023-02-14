@@ -1,0 +1,58 @@
+include:
+  - project: rayprosoft/tgs-ci-scripts
+    ref: main
+    file: GitLab/Templates/gitlab-job-templates.yml
+stages:
+  - deploy-dev
+  - deploy-staging
+  - deploy-prod
+
+deploy-gatus-dev:
+  variables:
+    namespace: dev
+    kube_config: KubeConfig_Raypro_dev
+  environment:
+    name: gatus-dev
+  stage: deploy-dev
+  only:
+    - main
+  when: manual
+  script:
+    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
+    - docker push $ImageName:$Tag
+
+
+ 
+
+deploy-gatus-staging:
+  variables:
+    namespace: staging
+    kube_config: KubeConfig_Raypro_staging
+  environment:
+    name: gatus-prod
+  stage: deploy-staging
+  needs: 
+    - deploy-gatus-dev
+  only:
+    - main
+  when: manual
+  script:
+    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
+    - docker push $ImageName:$Tag
+
+
+deploy-gatus-prod:
+  variables:
+    namespace: prod
+    kube_config: KubeConfig_Raypro_prod
+  environment:
+    name: gatus-prod
+  stage: deploy-prod
+  needs: 
+    - deploy-gatus-staging
+  only:
+    - main
+  when: manual
+  script:
+    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
+    - docker push $ImageName:$Tag
