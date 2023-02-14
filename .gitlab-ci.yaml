@@ -9,8 +9,10 @@ stages:
 
 deploy-gatus-dev:
   variables:
-    namespace: dev
     kube_config: KubeConfig_Raypro_dev
+    namespace: dev
+    domain: dev-gatus.rpgp.cc
+    url: https://dev-gatus.rpgp.cc/ 
   environment:
     name: gatus-dev
   stage: deploy-dev
@@ -18,16 +20,15 @@ deploy-gatus-dev:
     - main
   when: manual
   script:
-    - bash dev/convert_to_config.sh
-    - helm template gatus ./dev/ --set-file config=dev/config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f dev/values.yaml -n dev | kubectl apply -f -
-
-
- 
+    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
 
 deploy-gatus-staging:
   variables:
-    namespace: staging
     kube_config: KubeConfig_Raypro_staging
+    namespace: staging
+    domain: staging-gatus.rpgp.cc
+    url: https://staging-gatus.rpgp.cc/ 
   environment:
     name: gatus-prod
   stage: deploy-staging
@@ -37,14 +38,16 @@ deploy-gatus-staging:
     - main
   when: manual
   script:
-    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
-    - docker push $ImageName:$Tag
+    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
 
 
 deploy-gatus-prod:
   variables:
-    namespace: prod
     kube_config: KubeConfig_Raypro_prod
+    namespace: prod
+    domain: healthcheck.srvptt.com
+    url: https://healthcheck.srvptt.com/ 
   environment:
     name: gatus-prod
   stage: deploy-prod
@@ -54,5 +57,6 @@ deploy-gatus-prod:
     - main
   when: manual
   script:
-    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
-    - docker push $ImageName:$Tag
+    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
+
