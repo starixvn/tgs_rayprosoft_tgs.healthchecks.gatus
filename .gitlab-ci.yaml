@@ -18,7 +18,7 @@ deploy-gatus-dev:
     - main
   when: manual
   script:
-    - dotnet build "$project" -c $BuildConfiguration -t:ContainerBuild -p:DockerfileTag="$ImageName:$Tag" --no-restore
+    - bash dev/convert_to_configmap.sh
     - docker push $ImageName:$Tag
 
 
