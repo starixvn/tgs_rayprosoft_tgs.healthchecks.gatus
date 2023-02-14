@@ -7,4 +7,4 @@ metadata:
     {{- include "gatus.labels" . | nindent 4 }}
 data:
   config.yaml: |-
-    {{ .Values.config | default (.Files.Get "config.yaml") | indent 4 }}
+{{ .Values.config | default (.Files.Get "config.yaml") | indent 4 }}
