@@ -19,7 +19,7 @@ deploy-gatus-dev:
   when: manual
   script:
     - bash dev/convert_to_configmap.sh
-    - docker push $ImageName:$Tag
+    - kubectl apply -f 
 
 
  

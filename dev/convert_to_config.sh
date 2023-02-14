@@ -10,8 +10,8 @@ storage_path=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.storage-p
 cat << EOF > $output_filename
 alerting:
   telegram:
-	token: "$telegram_token"
-	id: "$telegram_channel_id"
+    token: "$telegram_token"
+    id: "$telegram_channel_id"
 storage:
   type: $storage_type
   path: $storage_path

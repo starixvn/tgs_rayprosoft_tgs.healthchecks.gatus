@@ -10,15 +10,15 @@ download to services.csv
 
 
 ### 執行安裝
-helm template gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f values.yaml -n dev
+helm template gatus gatus/gatus --set-file config=dev/config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f dev/values.yaml -n dev | kubectl apply -f -
 
-helm install gatus gatus/gatus --set-file config=config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f values.yaml -n dev
+helm install gatus gatus/gatus --set-file config=dev/config.yaml --set ingress.enabled=true --set ingress.hosts[0]=dev-gatus.rpgp.cc -f dev/values.yaml -n dev
 
 helm uninstall gatus -n dev
 
 
 ### 更新 configmap
-bash convert_to_configmap.sh & kubectl apply -f cm_gatus.yaml & kubectl rollout restart deploy gatus -n dev 
+bash convert_to_configmap.sh & kubectl apply -f dev/cm_gatus.yaml & kubectl rollout restart deploy gatus -n dev 
 check on https://dev-gatus.rpgp.cc/
 
 REF: https://github.com/TwiN/gatus#monitoring-a-tcp-endpoint
