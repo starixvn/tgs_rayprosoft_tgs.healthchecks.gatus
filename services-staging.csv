@@ -116,7 +116,6 @@ game-record-service,game-gamerecord-awc-service,30s,http://game-gamerecord-awc-s
 game-record-service,game-gamerecord-bg-fishing-service,30s,http://game-gamerecord-bg-fishing-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-bti-service,30s,http://game-gamerecord-bti-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-dg-service,30s,http://game-gamerecord-dg-service/healthz,'[STATUS] == 200'
-game-record-service,game-gamerecord-dgtf-service,30s,http://game-gamerecord-dgtf-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-evolution-service,30s,http://game-gamerecord-evolution-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-habanero-service,30s,http://game-gamerecord-habanero-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-jdb-service,30s,http://game-gamerecord-jdb-service/healthz,'[STATUS] == 200'
