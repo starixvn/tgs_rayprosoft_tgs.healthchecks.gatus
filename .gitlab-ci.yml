@@ -12,7 +12,7 @@ deploy-gatus-dev:
     kube_config: KubeConfig_Raypro_dev
     namespace: dev
     domain: dev-gatus.rpgp.cc
-    url: https://dev-gatus.rpgp.cc/ 
+    gatus_url: https://dev-gatus.rpgp.cc/ 
   environment:
     name: gatus-dev
   stage: deploy-dev
@@ -20,7 +20,7 @@ deploy-gatus-dev:
     - main
   when: manual
   script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
     - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
 
 deploy-gatus-staging:
@@ -28,7 +28,7 @@ deploy-gatus-staging:
     kube_config: KubeConfig_Raypro_staging
     namespace: staging
     domain: staging-gatus.rpgp.cc
-    url: https://staging-gatus.rpgp.cc/ 
+    gatus_url: https://staging-gatus.rpgp.cc/ 
   environment:
     name: gatus-prod
   stage: deploy-staging
@@ -38,7 +38,7 @@ deploy-gatus-staging:
     - main
   when: manual
   script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
     - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
 
 
@@ -47,7 +47,7 @@ deploy-gatus-prod:
     kube_config: KubeConfig_Raypro_prod
     namespace: prod
     domain: healthcheck.srvptt.com
-    url: https://healthcheck.srvptt.com/ 
+    gatus_url: https://healthcheck.srvptt.com/ 
   environment:
     name: gatus-prod
   stage: deploy-prod
@@ -57,6 +57,6 @@ deploy-gatus-prod:
     - main
   when: manual
   script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $url
+    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
     - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
 
