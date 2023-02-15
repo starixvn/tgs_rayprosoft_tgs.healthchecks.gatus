@@ -8,7 +8,7 @@ stages:
   - deploy-prod
 
 .convert_to_config: &convert_to_config
-    - ./convert_to_config.sh $namespace services-$namespace.csv $gatus_url
+    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
 
 deploy-gatus-dev:
   extends: .deploy-gatus
