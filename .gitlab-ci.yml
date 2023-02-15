@@ -28,8 +28,6 @@ deploy-gatus-staging:
   environment:
     name: gatus-prod
   stage: deploy-staging
-  needs: 
-    - deploy-gatus-dev
 
 deploy-gatus-prod:
   extends: .deploy-gatus
