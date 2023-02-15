@@ -7,6 +7,10 @@ stages:
   - deploy-staging
   - deploy-prod
 
+.convert-config
+  script:
+    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
+
 deploy-gatus-dev:
   extends: .deploy-gatus
   variables:
@@ -17,6 +21,9 @@ deploy-gatus-dev:
   environment:
     name: gatus-dev
   stage: deploy-dev
+  script:
+    - *convert_to_config
+    - !reference [.deploy-gatus, script]
 
 deploy-gatus-staging:
   extends: .deploy-gatus
@@ -28,6 +35,9 @@ deploy-gatus-staging:
   environment:
     name: gatus-staging
   stage: deploy-staging
+  script:
+    - *convert_to_config
+    - !reference [.deploy-gatus, script]
 
 deploy-gatus-prod:
   extends: .deploy-gatus
@@ -39,3 +49,6 @@ deploy-gatus-prod:
   environment:
     name: gatus-prod
   stage: deploy-prod
+  script:
+    - *convert_to_config
+    - !reference [.deploy-gatus, script]
