@@ -2,6 +2,9 @@ include:
   - project: rayprosoft/tgs-ci-scripts
     ref: main
     file: GitLab/Templates/gatus-job-templates.yml
+variables:
+  HelmTemplateFolderName: gatus
+  
 stages:
   - deploy-dev
   - deploy-staging
