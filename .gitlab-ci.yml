@@ -19,9 +19,18 @@ deploy-gatus-dev:
   only:
     - main
   when: manual
+  before_script:
+    - kubePath=$(eval eval 'echo \$"$kube_config"')
+    - export KUBECONFIG=$kubePath
   script:
     - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
+    - |
+      helm template gatus deployment/k8s/gatus \
+        --set-file config=config-$namespace.yaml \
+        --set ingress.enabled=true \
+        --set ingress.hosts[0]=$domain \
+        -f deployment/k8s/gatus/values.yaml -n $namespace \
+        | kubectl apply -f -
 
 deploy-gatus-staging:
   variables:
@@ -37,9 +46,18 @@ deploy-gatus-staging:
   only:
     - main
   when: manual
+  before_script:
+    - kubePath=$(eval eval 'echo \$"$kube_config"')
+    - export KUBECONFIG=$kubePath
   script:
     - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
+    - | 
+      helm template gatus deployment/k8s/gatus \
+        --set-file config=config-$namespace.yaml \
+        --set ingress.enabled=true \
+        --set ingress.hosts[0]=$domain \
+        -f deployment/k8s/gatus/values.yaml -n $namespace \
+        | kubectl apply -f -
 
 
 deploy-gatus-prod:
@@ -56,7 +74,16 @@ deploy-gatus-prod:
   only:
     - main
   when: manual
+  before_script:
+    - kubePath=$(eval eval 'echo \$"$kube_config"')
+    - export KUBECONFIG=$kubePath
   script:
     - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - helm template gatus . --set-file config=config-$namespace.yaml --set ingress.enabled=true --set ingress.hosts[0]=$domain -f values.yaml -n $namespace | kubectl apply -f -
+    - |
+      helm template gatus deployment/k8s/gatus \
+        --set-file config=config-$namespace.yaml \
+        --set ingress.enabled=true \
+        --set ingress.hosts[0]=$domain \
+        -f deployment/k8s/gatus/values.yaml -n $namespace \
+        | kubectl apply -f -
 
