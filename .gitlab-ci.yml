@@ -12,6 +12,7 @@ stages:
 
 .convert_to_config: &convert_to_config
     - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
+    - echo "HelmTemplateFolderName:$HelmTemplateFolderName"
 
 deploy-gatus-dev:
   extends: .deploy-gatus
