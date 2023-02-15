@@ -1,4 +1,3 @@
-agent,test,30s,http://test,'[STATUS] == 200'
 agent,agent,30s,http://agent,'[STATUS] == 200'
 agent,agent-api,30s,http://agent-api/health,'[STATUS] == 200'
 agent,agent-test,30s,http://agent-test,'[STATUS] == 200'
