@@ -1,6 +1,6 @@
 #!/bin/bash
 tgs_env=$1
-file=$2
+file=services/$2
 gatus_url=$3
 output_filename=config-$tgs_env.yaml
 telegram_token=$(kubectl get secrets tgs-gatus --output="jsonpath={.data.telegram-token}" -n $tgs_env | base64 --decode)
