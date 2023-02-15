@@ -1,13 +1,14 @@
 include:
   - project: rayprosoft/tgs-ci-scripts
-    ref: main
-    file: GitLab/Templates/gitlab-job-templates.yml
+    ref: feats/add-gatus-deployment
+    file: GitLab/Templates/gatus-job-templates.yml
 stages:
   - deploy-dev
   - deploy-staging
   - deploy-prod
 
 deploy-gatus-dev:
+  extends: .deploy-gatus
   variables:
     kube_config: KubeConfig_Raypro_dev
     namespace: dev
@@ -16,23 +17,9 @@ deploy-gatus-dev:
   environment:
     name: gatus-dev
   stage: deploy-dev
-  only:
-    - main
-  when: manual
-  before_script:
-    - kubePath=$(eval eval 'echo \$"$kube_config"')
-    - export KUBECONFIG=$kubePath
-  script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - |
-      helm template gatus deployment/k8s/gatus \
-        --set-file config=config-$namespace.yaml \
-        --set ingress.enabled=true \
-        --set ingress.hosts[0]=$domain \
-        -f deployment/k8s/gatus/values.yaml -n $namespace \
-        | kubectl apply -f -
 
 deploy-gatus-staging:
+  extends: .deploy-gatus
   variables:
     kube_config: KubeConfig_Raypro_staging
     namespace: staging
@@ -43,24 +30,9 @@ deploy-gatus-staging:
   stage: deploy-staging
   needs: 
     - deploy-gatus-dev
-  only:
-    - main
-  when: manual
-  before_script:
-    - kubePath=$(eval eval 'echo \$"$kube_config"')
-    - export KUBECONFIG=$kubePath
-  script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - | 
-      helm template gatus deployment/k8s/gatus \
-        --set-file config=config-$namespace.yaml \
-        --set ingress.enabled=true \
-        --set ingress.hosts[0]=$domain \
-        -f deployment/k8s/gatus/values.yaml -n $namespace \
-        | kubectl apply -f -
-
 
 deploy-gatus-prod:
+  extends: .deploy-gatus
   variables:
     kube_config: KubeConfig_Raypro_prod
     namespace: prod
@@ -69,21 +41,3 @@ deploy-gatus-prod:
   environment:
     name: gatus-prod
   stage: deploy-prod
-  needs: 
-    - deploy-gatus-staging
-  only:
-    - main
-  when: manual
-  before_script:
-    - kubePath=$(eval eval 'echo \$"$kube_config"')
-    - export KUBECONFIG=$kubePath
-  script:
-    - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - |
-      helm template gatus deployment/k8s/gatus \
-        --set-file config=config-$namespace.yaml \
-        --set ingress.enabled=true \
-        --set ingress.hosts[0]=$domain \
-        -f deployment/k8s/gatus/values.yaml -n $namespace \
-        | kubectl apply -f -
-
