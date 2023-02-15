@@ -1,6 +1,6 @@
 include:
   - project: rayprosoft/tgs-ci-scripts
-    ref: feats/add-gatus-deployment
+    ref: main
     file: GitLab/Templates/gatus-job-templates.yml
 stages:
   - deploy-dev
