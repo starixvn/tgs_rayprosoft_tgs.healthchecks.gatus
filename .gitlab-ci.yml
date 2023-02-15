@@ -2,8 +2,6 @@ include:
   - project: rayprosoft/tgs-ci-scripts
     ref: main
     file: GitLab/Templates/gatus-job-templates.yml
-variables:
-  HelmTemplateFolderName: gatus
   
 stages:
   - deploy-dev
@@ -12,11 +10,11 @@ stages:
 
 .convert_to_config: &convert_to_config
     - bash convert_to_config.sh $namespace services-$namespace.csv $gatus_url
-    - echo "HelmTemplateFolderName:$HelmTemplateFolderName"
 
 deploy-gatus-dev:
   extends: .deploy-gatus
   variables:
+    HelmTemplateFolderName: gatus
     kube_config: KubeConfig_Raypro_dev
     namespace: dev
     domain: dev-gatus.rpgp.cc
@@ -31,6 +29,7 @@ deploy-gatus-dev:
 deploy-gatus-staging:
   extends: .deploy-gatus
   variables:
+    HelmTemplateFolderName: gatus
     kube_config: KubeConfig_Raypro_staging
     namespace: staging
     domain: stg-gatus.rpgp.cc
@@ -45,6 +44,7 @@ deploy-gatus-staging:
 deploy-gatus-prod:
   extends: .deploy-gatus
   variables:
+    HelmTemplateFolderName: gatus
     kube_config: KubeConfig_Raypro_prod
     namespace: prod
     domain: healthcheck.srvptt.com
