@@ -23,7 +23,7 @@ deploy-gatus-staging:
   variables:
     kube_config: KubeConfig_Raypro_staging
     namespace: staging
-    domain: stag-gatus.rpgp.cc
+    domain: stg-gatus.rpgp.cc
     gatus_url: https://stg-gatus.rpgp.cc/ 
   environment:
     name: gatus-staging
