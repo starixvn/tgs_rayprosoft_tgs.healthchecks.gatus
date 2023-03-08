@@ -45,6 +45,7 @@ game,game-gamefundtransfer,30s,http://game-gamefundtransfer/healthz,'[STATUS] ==
 game,game-gameplayerbalance,30s,http://game-gameplayerbalance/healthz,'[STATUS] == 200'
 game,game-gameplayerlogout,30s,http://game-gameplayerlogout/healthz,'[STATUS] == 200'
 game,game-gameproviders,30s,http://game-gameproviders/healthz,'[STATUS] == 200'
+game,game-gamerecord-endor-session,30s,http://game-gamerecord-endor-session/healthz,'[STATUS] == 200'
 game,game-gamerecord-ky-scheduleservice,30s,http://game-gamerecord-ky-scheduleservice/healthz,'[STATUS] == 200'
 game,game-gamerecord-ky-service,30s,http://game-gamerecord-ky-service/healthz,'[STATUS] == 200'
 game,game-gamerecord-manual-service,30s,http://game-gamerecord-manual-service/healthz,'[STATUS] == 200'
