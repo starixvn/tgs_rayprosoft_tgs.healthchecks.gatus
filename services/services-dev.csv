@@ -25,6 +25,7 @@ backend,report-aggregate-service,30s,http://report-aggregate-service/health,'[ST
 backend,report-api,30s,http://report-api/healthz,'[STATUS] == 200'
 backend,schedulers,30s,http://schedulers/health,'[STATUS] == 200'
 backend,sms-globalcall,30s,http://sms-globalcall/healthz,'[STATUS] == 200'
+backend,sms-maiteng,30s,http://sms-maiteng/healthz,'[STATUS] == 200'
 backend,sms-service,30s,http://sms-service/healthz,'[STATUS] == 200'
 backend,tgs-deposit-accumulate-roulette,30s,http://tgs-deposit-accumulate-roulette/healthz,'[STATUS] == 200'
 backend,tgs-deposit-accumulate-roulette-background,30s,http://tgs-deposit-accumulate-roulette-background/healthz,'[STATUS] == 200'
