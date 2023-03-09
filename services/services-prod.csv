@@ -82,7 +82,6 @@ game-interface,game-gameinterface-tfgaming-service,60s,http://game-gameinterface
 game-interface,game-gameinterface-wgfm-service,60s,http://game-gameinterface-wgfm-service/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wmcasino-service,60s,http://game-gameinterface-wmcasino-service/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-bti-manualservice,60s,http://game-gamerecord-bti-manualservice/healthz,'[STATUS] == 200'
-game-record-manualservice,game-gamerecord-evolution-manualservice,60s,http://game-gamerecord-evolution-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-habanero-manualservice,60s,http://game-gamerecord-habanero-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-jdb-manualservice,60s,http://game-gamerecord-jdb-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-jili-manualservice,60s,http://game-gamerecord-jili-manualservice/healthz,'[STATUS] == 200'
