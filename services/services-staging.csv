@@ -81,7 +81,6 @@ game-record-manualservice,game-gamerecord-pptf-manualservice,120s,http://game-ga
 game-record-manualservice,game-gamerecord-saba-manualservice,120s,http://game-gamerecord-saba-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-sbo-manualservice,120s,http://game-gamerecord-sbo-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-sm01-manualservice,120s,http://game-gamerecord-sm01-manualservice/healthz,'[STATUS] == 200'
-game-record-manualservice,game-gamerecord-sw-manualservice,120s,http://game-gamerecord-sw-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-tfgaming-manualservice,120s,http://game-gamerecord-tfgaming-manualservice/healthz,'[STATUS] == 200'
 game-record-manualservice,game-gamerecord-wmcasino-manualservice,120s,http://game-gamerecord-wmcasino-manualservice/healthz,'[STATUS] == 200'
 game-record-scheduleservice,game-gamerecord-joker-scheduleservice,120s,http://game-gamerecord-joker-scheduleservice/healthz,'[STATUS] == 200'
