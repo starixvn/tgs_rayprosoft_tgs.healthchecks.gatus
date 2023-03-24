@@ -139,7 +139,6 @@ game-record-service,game-gamerecord-wgfm-service,60s,http://game-gamerecord-wgfm
 game-record-service,game-gamerecord-wgvia-service,60s,http://game-gamerecord-wgvia-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-wmcasino-service,60s,http://game-gamerecord-wmcasino-service/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-bc-workservice,60s,http://game-gamerecord-bc-workservice/healthz,'[STATUS] == 200'
-game-record-workservice,game-gamerecord-evolution-workservice,60s,http://game-gamerecord-evolution-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-jdb-workservice,60s,http://game-gamerecord-jdb-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-jili-workservice,60s,http://game-gamerecord-jili-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-pptf-workservice,60s,http://game-gamerecord-pptf-workservice/healthz,'[STATUS] == 200'

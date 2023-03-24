@@ -130,7 +130,6 @@ game-record-service,game-gamerecord-wgvia-service,120s,http://game-gamerecord-wg
 game-record-service,game-gamerecord-wmcasino-service,120s,http://game-gamerecord-wmcasino-service/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-bc-workservice,120s,http://game-gamerecord-bc-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-bti-workservice,120s,http://game-gamerecord-bti-workservice/healthz,'[STATUS] == 200'
-game-record-workservice,game-gamerecord-evolution-workservice,120s,http://game-gamerecord-evolution-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-jdb-workservice,120s,http://game-gamerecord-jdb-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-jili-workservice,120s,http://game-gamerecord-jili-workservice/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-manualworkservice,120s,http://game-gamerecord-manualworkservice/healthz,'[STATUS] == 200'
