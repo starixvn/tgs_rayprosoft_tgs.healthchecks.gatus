@@ -54,7 +54,7 @@ backend,tgs-playerbucket-committer,60s,http://tgs-playerbucket-committer/healthz
 backend,tgs-playerbucket-service,60s,http://tgs-playerbucket-service/healthz,'[STATUS] == 200'
 backend,tgs-playerbucket-worker,60s,http://tgs-playerbucket-worker/healthz,'[STATUS] == 200'
 backend,tgs-production,60s,http://tgs-production/healthz,'[STATUS] == 200'
-backend,validatecode-api,60s,http://validatecode-api/health,'[STATUS] == 200'
+backend,validatecode-api,60s,http://validatecode-api/healthz,'[STATUS] == 200'
 game,game-gamecommand,60s,http://game-gamecommand/healthz,'[STATUS] == 200'
 game,game-gamecurrency,60s,http://game-gamecurrency/healthz,'[STATUS] == 200'
 game,game-gameexternalinterface-sw-service,60s,http://game-gameexternalinterface-sw-service/healthz,'[STATUS] == 200'
