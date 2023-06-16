@@ -134,7 +134,6 @@ game-gamerounds,game-gamerounds-work,60s,http://game-gamerounds-work/healthz,'[S
 game-gamerounds,game-gamerounds-work-manual,60s,http://game-gamerounds-work-manual/healthz,'[STATUS] == 200'
 game-single-wallet,game-365,120s,http://game-365/health,'[STATUS] == 200'
 game-single-wallet,game-ab,120s,http://game-ab/health,'[STATUS] == 200'
-game-single-wallet,game-ag,120s,http://game-ag/health,'[STATUS] == 200'
 game-single-wallet,game-bc,120s,http://game-bc/health,'[STATUS] == 200'
 game-single-wallet,game-bg,120s,http://game-bg/health,'[STATUS] == 200'
 game-single-wallet,game-imes,120s,http://game-imes/health,'[STATUS] == 200'
