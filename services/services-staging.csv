@@ -121,8 +121,6 @@ game-record-service,game-gamerecord-wgvia-service,120s,http://game-gamerecord-wg
 game-record-service,game-gamerecord-wmcasino-service,120s,http://game-gamerecord-wmcasino-service/healthz,'[STATUS] == 200'
 game-record-service,game-gamerecord-yeebet,120s,http://game-gamerecord-yeebet/healthz,'[STATUS] == 200'
 game-record-workservice,game-gamerecord-bc-workservice,120s,http://game-gamerecord-bc-workservice/healthz,'[STATUS] == 200'
-game-record-workservice,game-gamerecord-manualworkservice,120s,http://game-gamerecord-manualworkservice/healthz,'[STATUS] == 200'
-game-record-workservice,game-gamerecord-workservice,120s,http://game-gamerecord-workservice/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds,60s,http://game-gamerounds/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-handle,60s,http://game-gamerounds-handle/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-missing,60s,http://game-gamerounds-missing/healthz,'[STATUS] == 200'
