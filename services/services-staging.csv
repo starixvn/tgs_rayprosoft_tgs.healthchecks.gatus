@@ -63,7 +63,7 @@ game-interface,game-gameinterface-evolution-service,120s,http://game-gameinterfa
 game-interface,game-gameinterface-fachai,120s,http://game-gameinterface-fachai/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-habanero-service,120s,http://game-gameinterface-habanero-service/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-jdb-service,120s,http://game-gameinterface-jdb-service/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-jili-service,120s,http://game-gameinterface-jili-service/healthz,'[STATUS] == 200'
+game-interface,game-gameinterface-jili,120s,http://game-gameinterface-jili/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-joker,120s,http://game-gameinterface-joker/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-obet,120s,http://game-gameinterface-obet/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-pinnacle,120s,http://game-gameinterface-pinnacle/healthz,'[STATUS] == 200'
