@@ -37,7 +37,8 @@ podAnnotations: {}
 podLabels: {}
 
 # Apply extra labels to common labels
-extraLabels: {}
+extraLabels: 
+  velero.io/exclude-from-backup: "true"
 
 serviceAccount:
   create: false
