@@ -1,10 +1,6 @@
 # dev 
-### 新增 helm repo 
-helm repo add gatus https://avakarev.github.io/gatus-chart
-helm repo update
-
 ### 服務檔案
-kubectl get svc -n dev | awk '{print $1}' > service.txt
+kubectl get svc -n dev | awk '{print $1}' > service.txt   
 services: https://docs.google.com/spreadsheets/d/1aKM0LlNc96vuZZeqQdKlBLveBm0I0h-zsklvqhurjzM/edit#gid=1439647638
 download to services.csv
 執行 
