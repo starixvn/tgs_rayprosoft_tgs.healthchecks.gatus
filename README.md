@@ -17,6 +17,7 @@ helm template gatus . --set-file config=config-dev.yaml --set ingress.enabled=tr
 
 # dev
 bash convert_to_config.sh dev services-dev.csv https://dev-gatus.rpgp.cc/   
+
 helm template gatus deployment/k8s/gatus \
 	--set-file config=config-dev.yaml 
 	--set ingress.enabled=true \
@@ -25,6 +26,7 @@ helm template gatus deployment/k8s/gatus \
 
 # staging
 bash convert_to_config.sh staging services-staging.csv https://stg-gatus.rpgp.cc/   
+
 helm template gatus deployment/k8s/gatus \
 	--set-file config=config-staging.yaml \
 	--set ingress.enabled=true \
@@ -33,6 +35,7 @@ helm template gatus deployment/k8s/gatus \
 
 # prod 
 bash convert_to_config.sh prod services-prod.csv https://healthcheck.srvptt.com/   
+
 helm template gatus deployment/k8s/gatus \
 	--set-file config=config-prod.yaml \
 	--set ingress.enabled=true \
