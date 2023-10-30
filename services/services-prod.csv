@@ -1,5 +1,5 @@
 agent,agent-api,60s,http://agent-api/health,'[STATUS] == 200'
-agent,agent-service,60s,http://agent-service/health,'[STATUS] == 200'
+agent,agent-service,60s,http://agent-service/healthz,'[STATUS] == 200'
 agent,agent-gpi,60s,http://agent-gpi,'[STATUS] == 200'
 agent,agent-gpi2,60s,http://agent-gpi2,'[STATUS] == 200'
 agent,agent-idr1,60s,http://agent-idr1,'[STATUS] == 200'
