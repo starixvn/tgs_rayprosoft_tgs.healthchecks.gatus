@@ -31,7 +31,7 @@ backend,promotion-register-service,60s,http://promotion-register-service/healthz
 backend,promotion-relief-money-service,60s,http://promotion-relief-money-service/healthz,'[STATUS] == 200'
 backend,report-aggregate-service,60s,http://report-aggregate-service/health,'[STATUS] == 200'
 backend,report-api,60s,http://report-api/healthz,'[STATUS] == 200'
-backend,schedulers,60s,http://schedulers/health,'[STATUS] == 200'
+backend,schedule-service,60s,http://schedule-service/health,'[STATUS] == 200'
 backend,sms-globalcall,60s,http://sms-globalcall/healthz,'[STATUS] == 200'
 backend,sms-service,60s,http://sms-service/healthz,'[STATUS] == 200'
 backend,tgs-deposit-accumulate-roulette,60s,http://tgs-deposit-accumulate-roulette/healthz,'[STATUS] == 200'
