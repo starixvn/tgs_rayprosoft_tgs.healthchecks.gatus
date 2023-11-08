@@ -85,7 +85,6 @@ game-interface,game-gameinterface-yeebet,60s,http://game-gameinterface-yeebet/he
 game-gamerounds,game-gamerounds,60s,http://game-gamerounds/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-handle,60s,http://game-gamerounds-handle/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-schedule,60s,http://game-gamerounds-schedule/healthz,'[STATUS] == 200'
-game-single-wallet,game-saba,60s,http://game-saba/health,'[STATUS] == 200'
 infrastructure,nats,30s,tcp://nats.prod:4222,'[CONNECTED] == true'
 infrastructure,pgpool,30s,tcp://pgpool:9999,'[CONNECTED] == true'
 infrastructure,prometheus-server,30s,http://prometheus-stack-kube-prom-prometheus.monitoring:9090,'[STATUS] == 200'
