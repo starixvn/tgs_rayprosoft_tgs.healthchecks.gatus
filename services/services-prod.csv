@@ -71,7 +71,7 @@ game-interface,game-gameinterface-ly,60s,http://game-gameinterface-ly/healthz,'[
 game-interface,game-gameinterface-obet,60s,http://game-gameinterface-obet/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-pinnacle,60s,http://game-gameinterface-pinnacle/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-pp,60s,http://game-gameinterface-pp/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-saba-service,60s,http://game-gameinterface-saba-service/healthz,'[STATUS] == 200'
+game-interface,game-gameinterface-saba-service,60s,http://game-gameinterface-saba-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-sbo-service,60s,http://game-gameinterface-sbo-service/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-sw-service,60s,http://game-gameinterface-sw-service/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-tfgaming-service,60s,http://game-gameinterface-tfgaming-service/healthz,'[STATUS] == 200'
