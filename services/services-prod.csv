@@ -62,6 +62,7 @@ game-interface,game-gameinterface-cp,60s,http://game-gameinterface-cp:8080/healt
 game-interface,game-gameinterface-dg-service,60s,http://game-gameinterface-dg-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-endor-service,60s,http://game-gameinterface-endor-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-evolution-service,60s,http://game-gameinterface-evolution-service:8080/healthz,'[STATUS] == 200'
+game-interface,game-gameinterface-fachai,60s,http://game-gameinterface-fachai:8080/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds,60s,http://game-gamerounds/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-handle,60s,http://game-gamerounds-handle/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-schedule,60s,http://game-gamerounds-schedule/healthz,'[STATUS] == 200'
