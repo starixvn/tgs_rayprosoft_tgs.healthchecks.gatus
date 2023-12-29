@@ -72,6 +72,7 @@ game-interface,game-gameinterface-joker,60s,http://game-gameinterface-joker:8080
 game-interface,game-gameinterface-ky,60s,http://game-gameinterface-ky:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-ly,60s,http://game-gameinterface-ly:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-obet,60s,http://game-gameinterface-obet:8080/healthz,'[STATUS] == 200'
+game-interface,game-gameinterface-pinnacle,60s,http://game-gameinterface-pinnacle:8080/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds,60s,http://game-gamerounds/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-handle,60s,http://game-gamerounds-handle/healthz,'[STATUS] == 200'
 game-gamerounds,game-gamerounds-schedule,60s,http://game-gamerounds-schedule/healthz,'[STATUS] == 200'
