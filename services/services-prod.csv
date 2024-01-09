@@ -53,7 +53,7 @@ game,game-gamefundtransfer,60s,http://game-gamefundtransfer:8080/healthz,'[STATU
 game,game-gameplayerbalance,60s,http://game-gameplayerbalance/healthz,'[STATUS] == 200'
 game,game-gameplayerlogout,60s,http://game-gameplayerlogout/healthz,'[STATUS] == 200'
 game,game-gameproviders,60s,http://game-gameproviders/healthz,'[STATUS] == 200'
-game,game-gamerecordschedules,60s,http://game-gamerecordschedules/healthz,'[STATUS] == 200'
+game,game-gamerecordschedules,60s,http://game-gamerecordschedules:8080/healthz,'[STATUS] == 200'
 game,game-pluggable-service,60s,http://game-pluggable-service/healthz,'[STATUS] == 200'
 game,game-token,60s,http://game-token/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-awc ,60s,http://game-gameinterface-awc:8080/healthz,'[STATUS] == 200'
