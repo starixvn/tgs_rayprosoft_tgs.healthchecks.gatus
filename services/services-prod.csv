@@ -60,7 +60,6 @@ game-interface,game-gameinterface-dg-service,60s,http://game-gameinterface-dg-se
 game-interface,game-gameinterface-endor-service,60s,http://game-gameinterface-endor-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-evolution-service,60s,http://game-gameinterface-evolution-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-fachai,60s,http://game-gameinterface-fachai:8080/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-gkx,60s,http://game-gameinterface-gkx:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-habanero-service,60s,http://game-gameinterface-habanero-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-im,60s,http://game-gameinterface-im:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-jdb-service,60s,http://game-gameinterface-jdb-service:8080/healthz,'[STATUS] == 200'
