@@ -78,7 +78,6 @@ game-interface,game-gameinterface-v8,60s,http://game-gameinterface-v8:8080/healt
 game-interface,game-gameinterface-vr,60s,http://game-gameinterface-vr:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wgfm-service,60s,http://game-gameinterface-wgfm-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wgvia,60s,http://game-gameinterface-wgvia:8080/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-wicketcricket,60s,http://game-gameinterface-wicketcricket:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wmcasino-service,60s,http://game-gameinterface-wmcasino-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-yeebet,60s,http://game-gameinterface-yeebet:8080/healthz,'[STATUS] == 200'
 infrastructure,nats,30s,tcp://nats.prod:4222,'[CONNECTED] == true'
