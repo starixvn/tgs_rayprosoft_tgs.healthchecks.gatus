@@ -74,7 +74,6 @@ game-interface,game-gameinterface-saba-service,60s,http://game-gameinterface-sab
 game-interface,game-gameinterface-sbo-service,60s,http://game-gameinterface-sbo-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-sw-service,60s,http://game-gameinterface-sw-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-tfgaming-service,60s,http://game-gameinterface-tfgaming-service:8080/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-v8,60s,http://game-gameinterface-v8:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-vr,60s,http://game-gameinterface-vr:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wgfm-service,60s,http://game-gameinterface-wgfm-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-wgvia,60s,http://game-gameinterface-wgvia:8080/healthz,'[STATUS] == 200'
