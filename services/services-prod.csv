@@ -54,7 +54,6 @@ game,game-pluggable-service,60s,http://game-pluggable-service/healthz,'[STATUS] 
 game,game-token,60s,http://game-token/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-awc ,60s,http://game-gameinterface-awc:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-cards365,60s,http://game-gameinterface-cards365:8080/healthz,'[STATUS] == 200'
-game-interface,game-gameinterface-cp,60s,http://game-gameinterface-cp:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-dg-service,60s,http://game-gameinterface-dg-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-endor-service,60s,http://game-gameinterface-endor-service:8080/healthz,'[STATUS] == 200'
 game-interface,game-gameinterface-evolution-service,60s,http://game-gameinterface-evolution-service:8080/healthz,'[STATUS] == 200'
