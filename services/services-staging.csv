@@ -44,7 +44,6 @@ game,game-gamefundtransfer,120s,http://game-gamefundtransfer:8080/healthz,'[STAT
 game,game-gameplayerbalance,120s,http://game-gameplayerbalance/healthz,'[STATUS] == 200'
 game,game-gameplayerlogout,120s,http://game-gameplayerlogout/healthz,'[STATUS] == 200'
 game,game-gameproviders,120s,http://game-gameproviders/healthz,'[STATUS] == 200'
-game,game-gamerecordschedules,120s,http://game-gamerecordschedules:8080/healthz,'[STATUS] == 200'
 game,game-token,120s,http://game-token/healthz,'[STATUS] == 200'
 infrastructure,mongodb,120s,http://mongodb:27017/health,'[STATUS] == 200'
 infrastructure,nats,120s,tcp://nats.staging:4222,'[CONNECTED] == true'
