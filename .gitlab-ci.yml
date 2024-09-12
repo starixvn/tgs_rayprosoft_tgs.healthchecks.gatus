@@ -15,7 +15,6 @@ deploy-gatus-dev:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    #kube_config: KubeConfig_Raypro_dev
     namespace: dev
     domain: dev-gatus.rpgp.cc
     gatus_url: https://dev-gatus.rpgp.cc/ 
@@ -34,7 +33,6 @@ deploy-gatus-staging:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    #kube_config: KubeConfig_Raypro_staging
     namespace: staging
     domain: stg-gatus.rpgp.cc
     gatus_url: https://stg-gatus.rpgp.cc/ 
@@ -53,7 +51,6 @@ deploy-gatus-prod:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    #kube_config: KubeConfig_Raypro_prod
     namespace: prod
     domain: healthcheck.srvptt.com
     gatus_url: https://healthcheck.srvptt.com/ 
