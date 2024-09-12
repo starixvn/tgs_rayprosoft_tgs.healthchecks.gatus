@@ -15,12 +15,16 @@ deploy-gatus-dev:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    kube_config: KubeConfig_Raypro_dev
+    #kube_config: KubeConfig_Raypro_dev
     namespace: dev
     domain: dev-gatus.rpgp.cc
     gatus_url: https://dev-gatus.rpgp.cc/ 
   environment:
     name: gatus-dev
+  tags:
+    - dev
+    - kubernetes
+    - deploy
   stage: deploy-dev
   script:
     - *convert_to_config
@@ -30,12 +34,16 @@ deploy-gatus-staging:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    kube_config: KubeConfig_Raypro_staging
+    #kube_config: KubeConfig_Raypro_staging
     namespace: staging
     domain: stg-gatus.rpgp.cc
     gatus_url: https://stg-gatus.rpgp.cc/ 
   environment:
     name: gatus-staging
+  tags:
+    - staging
+    - kubernetes
+    - deploy
   stage: deploy-staging
   script:
     - *convert_to_config
@@ -45,12 +53,16 @@ deploy-gatus-prod:
   extends: .deploy-gatus
   variables:
     HelmTemplateFolderName: gatus
-    kube_config: KubeConfig_Raypro_prod
+    #kube_config: KubeConfig_Raypro_prod
     namespace: prod
     domain: healthcheck.srvptt.com
     gatus_url: https://healthcheck.srvptt.com/ 
   environment:
     name: gatus-prod
+  tags:
+    - prod
+    - kubernetes
+    - deploy
   stage: deploy-prod
   script:
     - *convert_to_config
